@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans");
+
+$main-bg: #121212;
+$primary-dark: #1a1a1a;
+$light-dark: rgb(143, 143, 143);
+$secondary-font: "Montserrat", sans-serif;
+$main-font: "Nunito Sans", sans-serif;
+$primary-blue: #379ae6;
+
+@import "header";
+@import "showcase";
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  background: $main-bg;
+  font-family: $main-font;
+  color: #fff;
+  margin: 0;
+}
+
+.App {
+  height: 2000px;
+}

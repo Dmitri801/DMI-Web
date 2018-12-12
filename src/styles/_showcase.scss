@@ -1,0 +1,133 @@
+.showcase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 760px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .main_content {
+    height: 600px;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    .main_logo {
+      font-size: 7em;
+      font-weight: 900;
+      margin-bottom: 10px;
+      font-family: $secondary-font;
+    }
+
+    .subheading {
+      font-size: 2.4em;
+      color: $light-dark;
+      text-align: center;
+      margin: 0;
+      font-weight: 200;
+    }
+
+    .btn-group {
+      display: flex;
+      margin-top: 10px;
+      width: 80%;
+      height: 100px;
+      align-self: center;
+
+      .btn {
+        flex-grow: 1;
+        border: none;
+        font-size: 1.5em;
+        letter-spacing: 1.3px;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .btn-about {
+        background: $primary-blue;
+        color: #fff;
+        transition: all 0.3s ease-out;
+        &:hover {
+          background: darken($primary-blue, 10);
+        }
+      }
+
+      .btn-talk {
+        background: $primary-dark;
+        color: #fff;
+        transition: all 0.3s ease-out;
+        &:hover {
+          background: darken($primary-dark, 10);
+        }
+      }
+    }
+  }
+}
+
+.bottom_container {
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+
+  .mouse {
+    height: 60px;
+    width: 30px;
+    border: 1.5px solid lighten($light-dark, 15);
+    border-radius: 75px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      border-color: $primary-blue;
+    }
+
+    &::before {
+      content: "";
+      width: 5px;
+      height: 10px;
+      position: absolute;
+      top: 30px;
+      background: $primary-blue;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      opacity: 1;
+      transition: all 0.5s ease-out;
+      animation: mouse 2s infinite;
+    }
+  }
+}
+.social {
+  position: absolute;
+  left: 90px;
+
+  height: 150px;
+  display: flex;
+  flex-flow: column;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 20px;
+  a {
+    color: #fff;
+    .icon {
+      font-size: 1.5em;
+    }
+  }
+}
+@keyframes mouse {
+  from {
+    opacity: 1;
+    top: 10px;
+  }
+
+  to {
+    opacity: 0;
+    top: 40px;
+  }
+}
