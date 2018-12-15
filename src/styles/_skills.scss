@@ -1,0 +1,121 @@
+.skills-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.skills {
+  width: 70%;
+  padding: 180px 0;
+  padding-bottom: 70px;
+}
+
+.skills-header {
+  font-family: $secondary-font;
+  .sub-head {
+    color: $primary-blue;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    font-size: 1.3em;
+  }
+  .heading {
+    font-size: 2.7em;
+    text-align: center;
+  }
+}
+
+.chart-container {
+  margin-top: 75px;
+}
+
+.certifications {
+  position: relative;
+  padding: 180px 0;
+  background: darken($main-bg, 2);
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .certifications-content {
+    display: grid;
+    grid-gap: 20px;
+    width: 70%;
+    z-index: 5;
+  }
+
+  .certs-header {
+    font-family: $secondary-font;
+    text-align: center;
+    .sub-heading {
+      color: $primary-blue;
+      letter-spacing: 4px;
+      margin-bottom: 50px;
+      font-size: 1.3em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 2.7em;
+      text-align: center;
+    }
+  }
+
+  .certs-programs {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    padding: 15px;
+    margin-top: 50px;
+
+    span {
+      font-size: 2em;
+      color: $light-dark;
+      text-align: center;
+
+      .school {
+        font-size: 0.8em;
+        display: block;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  padding: 180px 0;
+  background: darken($main-bg, 2);
+  width: 100%;
+  height: 350px;
+  display: grid;
+  line-height: 1.8;
+  justify-content: center;
+  align-items: center;
+
+  .quote-box {
+    padding: 35px;
+    position: absolute;
+
+    .quote {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 35px;
+
+      svg {
+        width: 75px;
+        height: 75px;
+      }
+    }
+    .review {
+      font-size: 2.5em;
+      text-align: center;
+    }
+    .signature {
+      display: flex;
+      justify-content: center;
+      color: $primary-blue;
+    }
+  }
+}

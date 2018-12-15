@@ -1,0 +1,36 @@
+import React from "react";
+import PictureGallery from "./PictureGallery";
+const bgAbstract = require("../../img/dmi-web-abstract.jpg");
+function Projects() {
+  return (
+    <section id="projects" className="projects">
+      <div
+        style={{
+          background: `url(${bgAbstract})`,
+          position: "absolute",
+          right: "0",
+          top: "0",
+          backgroundSize: "cover",
+          zIndex: "1",
+          width: "50%",
+          height: "100%",
+          opacity: "0.3"
+        }}
+      />
+      <div className="projects_container">
+        <div className="projects-header">
+          <h3 className="sub-heading">Projects</h3>
+          <h1>
+            The projects I've worked on include standalone native applications
+            like Pet Fam, and also e-commerce sites with fully implemented
+            backends like Sparta Sounds.
+          </h1>
+        </div>
+        <hr className="line-break" />
+        <PictureGallery />
+      </div>
+    </section>
+  );
+}
+
+export default Projects;

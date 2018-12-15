@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import SideNav from "./SideNav";
 import LogoSVG from "../UI/LogoSVG";
+import Fade from "react-reveal/Fade";
+
 class Header extends Component {
   state = {
     navAtTop: true
@@ -18,34 +20,35 @@ class Header extends Component {
     }
   };
 
-  openSideNav = () => {
-    document.getElementById("side-nav").style.transform = "translateX(0)";
-  };
-
-  closeSideNav = () => {
-    document.getElementById("side-nav").style.transform = "translateX(100%)";
-  };
   render() {
     const { navAtTop } = this.state;
     return (
       <header className="header">
-        <h1 className="head_logo">
-          <LogoSVG />
-          <span>dmi.</span>
-        </h1>
-        <div
-          style={navAtTop ? {} : { background: "#000" }}
-          className="hamburger"
-        >
-          <a onClick={this.openSideNav} href="#!">
-            <svg width="30" height="30">
-              <path d="M0,5 30,5" stroke="#fff" strokeWidth="3" />
-              <path d="M0,14 30,14" stroke="#fff" strokeWidth="3" />
-              <path d="M0,23 30,23" stroke="#fff" strokeWidth="3" />
-            </svg>
-          </a>
-        </div>
-        <SideNav closeSideNav={this.closeSideNav} />
+        <Fade>
+          <h1 className="head_logo">
+            <LogoSVG />
+            <span>dmi.</span>
+          </h1>
+        </Fade>
+        <Fade>
+          <div
+            style={navAtTop ? {} : { background: "#000" }}
+            className="hamburger"
+          >
+            <a onClick={this.props.openSideNav} href="#!">
+              <svg width="30" height="30">
+                <path d="M0,5 30,5" stroke="#fff" strokeWidth="3" />
+                <path d="M0,14 30,14" stroke="#fff" strokeWidth="3" />
+                <path d="M0,23 30,23" stroke="#fff" strokeWidth="3" />
+              </svg>
+            </a>
+          </div>
+        </Fade>
+
+        <SideNav
+          sideNavOpen={this.props.sideNavOpen}
+          closeSideNav={this.props.closeSideNav}
+        />
       </header>
     );
   }
