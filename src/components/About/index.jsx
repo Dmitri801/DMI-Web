@@ -1,5 +1,6 @@
 import React from "react";
 import { Zoom, Fade } from "react-reveal";
+import { Link } from "react-scroll";
 const meImg = require("../../img/me.jpg");
 function About() {
   return (
@@ -10,12 +11,9 @@ function About() {
           <div className="bio">
             <img src={meImg} alt="" />
             <h2>
-              My name is Dmitriy, I've lived in Salt Lake City, Utah my whole
-              life. I'm passionate about building ground-breaking, and beautiful
-              websites{" "}
-              <span role="img" aria-label="cool emoji">
-                😎
-              </span>
+              My name is Dmitriy, I'm a full stack web developer living in Salt
+              Lake City, UT. Let me tell you a bit about my{" "}
+              <span>DEVosophy.</span>
             </h2>
           </div>
         </div>
@@ -23,12 +21,14 @@ function About() {
       <Fade bottom>
         <div className="about-details">
           <p>
-            I want to think <strong>big</strong> and outside the box when
-            building my sites and applications. In todays world of development
-            providing an intuitive, unique experience for the user, while
-            maintaining accessibility and scalability standards, can be the key
-            to jumpstarting your site to the highest realms of the interwebs.
+            I want to think <strong>big</strong> and efficient when building my
+            sites and applications. I believe in providing an intuitive, and
+            unique experience for the user, while also maintaining accessibility
+            and performance standards. That just might be the key to
+            jumpstarting your site to the highest realms of the interwebs.
+            <span className="border-bottom" />
           </p>
+          <h3>What can I do for you?</h3>
         </div>
       </Fade>
 
@@ -40,10 +40,10 @@ function About() {
               <h1>Web Sites</h1>
             </div>
             <p>
-              From fully featured e-commerce sites with an administrator
-              dashboard and paypal/stripe checkouts, to beautiful single page
-              blog websites, I have experience and the eye for design to help
-              you build your next great site.
+              From full stack e-commerce sites with an administrator dashboard
+              and a paypal checkout, to beautiful single page blog websites. I
+              have experience and the eye for design to help you build your next
+              great site, front to back.
             </p>
           </div>
           <div className="point pwa">
@@ -54,10 +54,9 @@ function About() {
             <p>
               Web sites that have features of mobile applications like offline
               capabilities, push notifications, responsiveness, and even the
-              ability to download the site to your phones home screen might
-              possibly be the future of the web. This website hits a 95 PWA
-              rating. But it still has that annoying loading wheel at the
-              beginning ..
+              ability to download the site to your phones home screen could be
+              the future of the web. This website hits a perfect 100 PWA rating.
+              But it still has that annoying loading wheel at the beginning ..
             </p>
           </div>
           <div className="point mobile">
@@ -66,10 +65,19 @@ function About() {
               <h1>Mobile Applications</h1>
             </div>
             <p>
-              With the emergence of React Native, web developers can not only
-              build your website, but also build a fully featured mobile
-              application for both Android and iOS devices, for a quarter of the
-              cost.
+              Take a{" "}
+              <Link
+                style={{ color: "#1179c7", cursor: "pointer" }}
+                spy={true}
+                smooth={true}
+                duration={500}
+                to="projects"
+              >
+                glance
+              </Link>{" "}
+              at a couple different mobile applications i've built using React
+              Native. Now, with just Javascript, the power is there to build
+              websites and native apps for both iOS and Android.
             </p>
           </div>
           <div className="point hosting">
@@ -79,8 +87,8 @@ function About() {
             </div>
             <p>
               Using Amazon Web Services, and various other technologies like
-              Heroku and Microsoft Azure, I can handle the deployment and
-              hosting needed for the site.
+              Heroku and Netlify, I can handle the deployment and hosting needed
+              for the site.
             </p>
           </div>
         </div>

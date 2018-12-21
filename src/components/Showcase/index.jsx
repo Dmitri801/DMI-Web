@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Main from "./Main";
-
+import { Link } from "react-scroll";
 import Fade from "react-reveal/Fade";
+import Social from "./Social";
 const showcaseBg = require("../../img/dmi-web-bg.jpg");
 class Showcase extends Component {
   render() {
@@ -20,6 +21,22 @@ class Showcase extends Component {
         <Fade bottom>
           <Main />
         </Fade>
+        <div className="bottom_container">
+          <Fade>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <div className="mouse" />
+            </Link>
+          </Fade>
+
+          <Social />
+        </div>
       </section>
     );
   }

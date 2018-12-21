@@ -35,7 +35,11 @@ class Header extends Component {
             style={navAtTop ? {} : { background: "#000" }}
             className="hamburger"
           >
-            <a onClick={this.props.openSideNav} href="#!">
+            <a
+              onClick={this.props.openSideNav}
+              aria-label="Side Nav Open"
+              href="#!"
+            >
               <svg width="30" height="30">
                 <path d="M0,5 30,5" stroke="#fff" strokeWidth="3" />
                 <path d="M0,14 30,14" stroke="#fff" strokeWidth="3" />

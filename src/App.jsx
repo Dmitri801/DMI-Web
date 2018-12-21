@@ -10,6 +10,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
 import "react-hint/css/index.css";
 import "aos/dist/aos.css";
 

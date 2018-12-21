@@ -9,7 +9,7 @@ export default function BackToTop() {
       width="75"
       height="75"
       viewBox="0 0 24 24"
-      style={{ fill: "#000" }}
+      style={{ fill: "#1a1a1a" }}
     >
       {" "}
       <path

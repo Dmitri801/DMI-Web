@@ -21,13 +21,16 @@
 
     img {
       border-radius: 50%;
-      border: 2px solid $primary-blue;
+
       margin-right: 25px;
-      -webkit-filter: drop-shadow(1px 1px 1px $primary-blue);
-      filter: drop-shadow(1px 1px 1px $primary-blue);
+      filter: drop-shadow(-1px 1px 1px rgba(#000, 0.5));
     }
     h2 {
       font-size: 2.7em;
+
+      span {
+        color: $primary-blue;
+      }
     }
   }
 }
@@ -37,8 +40,23 @@
   font-size: 1.4em;
   color: $light-dark;
   text-align: center;
+  position: relative;
   p {
     margin: 0;
+    .border-bottom {
+      position: absolute;
+      border: 0.5px solid rgba(lighten($primary-blue, 10), 0.1);
+      width: 90%;
+      left: 5%;
+      margin-top: 5px;
+      bottom: 30%;
+    }
+  }
+
+  h3 {
+    margin-top: 50px;
+    color: #fff;
+    text-align: left;
   }
 
   strong {

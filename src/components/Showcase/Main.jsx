@@ -1,7 +1,6 @@
 import React from "react";
-import Flash from "react-reveal/Flash";
-import { Link, scroller } from "react-scroll";
-import Social from "./Social";
+
+import { scroller } from "react-scroll";
 
 function Main() {
   const handleScrollTo = element => {
@@ -32,21 +31,6 @@ function Main() {
           LETS TALK
         </button>
       </div>
-      <div className="bottom_container">
-        <Flash delay={1100}>
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            <div className="mouse" />
-          </Link>
-        </Flash>
-      </div>
-      <Social />
     </div>
   );
 }

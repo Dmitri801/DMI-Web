@@ -1,0 +1,38 @@
+footer {
+  display: flex;
+  justify-content: center;
+  height: 125px;
+  background: darken($primary-blue, 3);
+  border-top: 0.5px solid rgba(white, 0.3);
+  width: 100%;
+  .inner-footer-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    .back-to-top {
+      margin-top: -50px;
+      z-index: 99;
+      cursor: pointer;
+      margin-left: 1px;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+      svg {
+        -webkit-filter: drop-shadow(-1px -1px 1px #000);
+        filter: drop-shadow(-1px -1px 1px #000);
+      }
+    }
+    h1 {
+      font-family: $secondary-font;
+      letter-spacing: 1.7px;
+    }
+
+    .copyright {
+      color: #fff;
+    }
+  }
+}

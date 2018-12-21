@@ -16,9 +16,9 @@
     padding-bottom: 70px;
 
     h3 {
-      color: $primary-dark;
+      color: #fff;
       text-transform: uppercase;
-      font-size: 1.7em;
+      font-size: 1.3em !important;
       letter-spacing: 4px;
     }
 
@@ -59,16 +59,17 @@
       font-size: 1.7em;
       width: 50%;
       text-align: center;
-      color: darken($primary-blue, 10);
+      color: $secondary-blue;
       font-family: $secondary-font;
       letter-spacing: 1.7px;
+      margin-left: 2px;
       border-right: 0.5px solid lighten($light-dark, 15);
     }
 
     div {
       width: 50%;
       text-align: center;
-      color: $light-dark;
+      color: #989595;
       font-size: 1.3em;
     }
   }

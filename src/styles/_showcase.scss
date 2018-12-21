@@ -1,15 +1,18 @@
 .showcase {
   min-height: 760px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-flow: column;
+  align-items: center;
 
   .main_content {
     position: relative;
+
     height: 600px;
     display: flex;
     flex-flow: column;
     text-align: center;
+    justify-content: center;
+
     .main_logo {
       font-size: 7em;
       font-weight: 900;
@@ -49,7 +52,7 @@
         color: #fff;
         transition: all 0.3s ease-out;
         &:hover {
-          background: darken($primary-blue, 10);
+          background: darken($primary-blue, 5);
         }
       }
 
@@ -99,7 +102,7 @@
 }
 .social {
   position: absolute;
-  left: 0px;
+  left: 90px;
 
   height: 150px;
   display: flex;

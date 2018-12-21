@@ -11,7 +11,7 @@ function LogoSVG() {
       viewBox="0 0 48 48"
       style={{ fill: "#00000" }}
     >
-      <g id="surface1">
+      <g>
         <path
           style={{ fill: "#064775" }}
           d="M 19.53125 17.3125 L 41 24 L 19.53125 9.757813 Z "
