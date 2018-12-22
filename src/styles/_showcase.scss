@@ -7,11 +7,11 @@
   .main_content {
     position: relative;
 
-    height: 600px;
+    height: 550px;
     display: flex;
     flex-flow: column;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-end;
 
     .main_logo {
       font-size: 7em;

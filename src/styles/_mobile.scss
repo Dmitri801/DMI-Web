@@ -1,9 +1,4 @@
 @media screen and (max-width: 1024px) {
-  .main-container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
   header .navbar-nav .side-nav-content {
     height: 600px;
   }
@@ -95,26 +90,13 @@
   }
 }
 
-// @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) and (max-width: 887px) {
-//   .projects {
-//     .gallery-container {
-//       flex-flow: column;
-//       flex-wrap: none;
-//       align-items: start;
-//       .column {
-//         width: 100%;
-//         height: auto;
-
-//         .project-detail {
-//           display: flex;
-//           flex-flow: column;
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media screen and (max-width: 887px) {
+  .showcase {
+    .main_content {
+      justify-content: center;
+      height: 600px;
+    }
+  }
   header .navbar-nav {
     width: 70%;
   }
@@ -250,7 +232,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 475px) {
   header .navbar-nav {
     width: 80%;
   }
@@ -304,6 +286,21 @@
       font-size: 1em;
     }
   }
+  .about-bullet-points {
+    font-size: 1em;
+    width: 95%;
+    .point {
+      width: 85%;
+      .point-head {
+        span {
+          display: none;
+        }
+        h1 {
+          font-size: 1.4em;
+        }
+      }
+    }
+  }
   .about {
     .about-details {
       font-size: 1em;
@@ -316,6 +313,20 @@
       }
     }
   }
+  .about-details h3 {
+    position: relative;
+
+    &:after {
+      content: "";
+      background: $primary-blue;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 70%;
+    }
+  }
+
   .about-header {
     margin-left: 10px;
     .sub-head {
@@ -446,17 +457,47 @@
       justify-content: center;
       margin-bottom: 15px;
       h2 {
-        font-size: 1.5em;
+        font-size: 1em;
       }
+
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  .about-details h3 {
+    position: relative;
+
+    &:after {
+      content: "";
+      background: $primary-blue;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 70%;
     }
   }
 
   .about-details p {
     font-size: 0.9em;
-
+    text-align: center;
     max-width: 90%;
   }
   .about-bullet-points {
     font-size: 0.8em;
+    width: 95%;
+    .point {
+      width: 85%;
+      .point-head {
+        span {
+          display: none;
+        }
+        h1 {
+          font-size: 1.4em;
+        }
+      }
+    }
   }
 }
