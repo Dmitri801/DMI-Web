@@ -8,9 +8,9 @@ import Backdrop from "./components/UI/Backdrop";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import AsyncComponent from "./components/HOC/AsyncComponent";
 import "react-hint/css/index.css";
 import "aos/dist/aos.css";
 
@@ -18,17 +18,28 @@ const ReactHint = ReactHintFactory(React);
 
 class App extends Component {
   state = {
-    loading: true,
-    sideNavOpen: false
+    loading: false,
+    sideNavOpen: false,
+    pageTouched: false
   };
 
   componentDidMount() {
-    this.loadSite(() => {
-      AOS.init({
-        disable: "mobile"
-      });
-    }, 1000);
+    AOS.init({
+      disable: "mobile"
+    });
+    window.addEventListener("scroll", e => {
+      if (window.scrollY > 1 && !this.state.pageTouched) {
+        this.setState({
+          pageTouched: true
+        });
+      }
+    });
   }
+
+  renderContact = () => {
+    const AsyncContact = AsyncComponent(() => import("./components/Contact"));
+    return <AsyncContact />;
+  };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevState.sideNavOpen !== this.state.sideNavOpen) {
@@ -91,7 +102,7 @@ class App extends Component {
             <Projects />
             <Skills />
 
-            <Contact />
+            {this.state.pageTouched && this.renderContact()}
           </main>
           <Footer />
         </div>

@@ -265,7 +265,7 @@ function PictureGallery({ device }) {
         <figure data-aos-delay="200" data-aos="fade-up" data-aos-offset="500">
           <picture>
             <source media="(min-width: 650px)" srcSet={restReviewsSm} />
-            <source media="(max-width: 465px)" srcSet={restReviewsLg} />
+            <source media="(max-width: 465px)" srcSet={restReviewsSm} />
             <img
               style={device !== "mobile" ? { position: "absolute" } : {}}
               src={restReviewsLg}
@@ -277,7 +277,7 @@ function PictureGallery({ device }) {
             <div className="github">
               <div
                 onClick={() =>
-                  window.open("https://github.com/Dmitri801/MWS-Restaurant-V2")
+                  window.open("https://github.com/Dmitri801/MWS-RReviews_Final")
                 }
                 data-rh-at="right"
                 data-rh="Github"
@@ -287,7 +287,9 @@ function PictureGallery({ device }) {
               </div>
             </div>
             <div className="view-site">
-              <button onClick={() => window.open("https://dmiwebtree.com")}>
+              <button
+                onClick={() => window.open("https://restaurantreviews.live")}
+              >
                 View Site
               </button>
             </div>

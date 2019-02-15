@@ -56,7 +56,7 @@ function About() {
               capabilities, push notifications, responsiveness, and even the
               ability to download the site to your phones home screen could be
               the future of the web. This website hits a perfect 100 PWA rating.
-              But it still has that annoying loading wheel at the beginning ..
+              And you can even download it if you really want too...
             </p>
           </div>
           <div className="point mobile">
